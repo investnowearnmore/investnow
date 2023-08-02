@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Payment | Invest Now Earn More</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a href="/index.html" class="navbar-brand"
+          ><img width="50px" src="/logo.png" alt="logo" />Invest Now</a
+        >
+        <a href="https://api.whatsapp.com/send?phone=8287433997" target="_blank"
+          ><img
+            width="50px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
+            alt="whatsapp"
+        /></a>
+      </div>
+    </nav>
+
+    <div id="qr">
+      <img src="./payment_qr.jpg" alt="Payment QR Code" />
+      <p>Scan Only this QR Code to Payment</p>
+    </div>
+    <!-- <div class="allValue mt-3 d-flex justify-content-center gap-5">
+      <p>Price : <span id="totalprice">0</span></p>
+      <p>Price : <span>100</span></p>
+      <p>Price : <span>100</span></p>
+    </div> -->
+
+    <!-- Main div  -->
+    <div id="invoice">
+      <!-- Form  -->
+
+      <form id="form" onsubmit="generatePDF()">
+      <!-- Select  -->
+
+      <div class="row">
+        <div class="col-6">
+          <select
+            id="price"
+            class="form-select mt-3"
+            aria-label="Default select example"
+          >
+            <option value="0" selected>Products</option>
+            <option value="500">IN-500</option>
+            <option value="1000">IN-1000</option>
+            <option value="2000">IN-2000</option>
+            <option value="5000">IN-5000</option>
+            <option value="10000">IN-10000</option>
+            <option value="20000">IN-20000</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <select class="form-select mt-3" aria-label="Default select example">
+            <option selected>Tenue (Days)</option>
+            <option value="1">30 Days</option>
+            <option value="2">50 Days</option>
+            <option value="3">80 Days</option>
+            <option value="4">100 Days</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-floating mt-3">
+        <input
+          type="number"
+          class="form-control"
+          id="floatingMobile"
+          placeholder="name@example.com"
+          required
+        />
+        <label for="floatingMobile">Enter Payment UTR/UPI Ref. Number</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="number"
+          class="form-control"
+          id="floatingMobile"
+          placeholder="name@example.com"
+          required
+        />
+        <label for="floatingMobile">Enter your Mobile Number</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingName"
+          placeholder="Password"
+          required
+        />
+        <label for="floatingName">Enter your Name</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingBankName"
+          placeholder="Password"
+          required
+        />
+        <label for="floatingBankName">Enter your Bank Name</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="number"
+          class="form-control"
+          id="floatingNumber"
+          placeholder="Password"
+          required
+        />
+        <label for="floatingPassword">Enter your Bank Account Number</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingIFSC"
+          placeholder="Password"
+          required
+        />
+        <label for="floatingIFSC">Enter your Bank IFSC Code</label>
+      </div>
+      <div class="form-floating mt-3">
+        <input
+          type="number"
+          class="form-control"
+          id="floatingReferal"
+          placeholder="Password"
+          required
+        />
+        <label for="floatingReferal"
+          >Referal (Referal mobile Number or NA)</label
+        >
+      </div>
+    </div>
+    </form>
+    <button
+      class="btn btn-success mx-auto d-block mt-3 mb-3"
+      type="submit"
+      id="screenshot"
+    >Take Screenshot and send the Admin</button>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

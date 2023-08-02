@@ -1,0 +1,29 @@
+body {
+  width: 320px;
+  margin: auto;
+  /* text-align: center; */
+}
+
+.row_col img {
+  width: 100px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.row_col {
+  text-align: center;
+}
+
+.btn_coll {
+  text-align: center;
+}
+
+#qr img {
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+
+#qr {
+  text-align: center;
+}
